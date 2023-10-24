@@ -6,14 +6,14 @@ import plotly.figure_factory as ff
 import streamlit as st
 
 # Load Dataframes 
-df_age_2023 = pd.read_pickle('Data/Dashboard Dataframes/df_age_2023.pkl')
-df_LearnCourse_2023_ = pd.read_pickle('Data/Dashboard Dataframes/df_LearnCourse_2023_.pkl')
-df_TimeSearching_2023 = pd.read_pickle('Data/Dashboard Dataframes/df_TimeSearching_2023.pkl')
-df_AISearch_WorkedWith_ = pd.read_pickle('Data/Dashboard Dataframes/df_AISearch_WorkedWith_.pkl')
-df_AISelect = pd.read_pickle('Data/Dashboard Dataframes/df_AISelect.pkl')
-df_AIBen = pd.read_pickle('Data/Dashboard Dataframes/df_AIBen.pkl')
-df_AIToolCurrently_ = pd.read_pickle('Data/Dashboard Dataframes/df_AIToolCurrently_.pkl')
-df_Skills_Jobs = pd.read_pickle('Data/Dashboard Dataframes/df_Skills_Jobs.pkl')
+df_age_2023 = pd.read_pickle('df_age_2023.pkl')
+df_LearnCourse_2023_ = pd.read_pickle('df_LearnCourse_2023_.pkl')
+df_TimeSearching_2023 = pd.read_pickle('df_TimeSearching_2023.pkl')
+df_AISearch_WorkedWith_ = pd.read_pickle('df_AISearch_WorkedWith_.pkl')
+df_AISelect = pd.read_pickle('df_AISelect.pkl')
+df_AIBen = pd.read_pickle('df_AIBen.pkl')
+df_AIToolCurrently_ = pd.read_pickle('df_AIToolCurrently_.pkl')
+df_Skills_Jobs = pd.read_pickle('df_Skills_Jobs.pkl')
 df_MiscTech = df_Skills_Jobs['MiscTechHaveWorkedWith'].sum().sort_values(ascending=False).head(10).sort_values(ascending=True).reset_index().rename(columns={'index':'MiscTech',0:'count'}).replace({'.NET Framework (1.0 - 4.8)':'.NET Framework'})
 
 st.markdown('<p style="color:#0000e6;font-size:50px;text-align:center;"><strong>Developers Dashboard </strong></p>',unsafe_allow_html=True)
