@@ -16,7 +16,7 @@ df_AIToolCurrently_ = pd.read_pickle('df_AIToolCurrently_.pkl')
 df_Skills_Jobs = pd.read_pickle('df_Skills_Jobs.pkl')
 df_MiscTech = df_Skills_Jobs['MiscTechHaveWorkedWith'].sum().sort_values(ascending=False).head(10).sort_values(ascending=True).reset_index().rename(columns={'index':'MiscTech',0:'count'}).replace({'.NET Framework (1.0 - 4.8)':'.NET Framework'})
 
-st.markdown('<p style="color:#0000e6;font-size:50px;text-align:center;"><strong>Developers Dashboard </strong></p>',unsafe_allow_html=True)
+st.markdown('<p style="color:#2929a3;font-size:50px;text-align:center;"><strong>Developers Dashboard </strong></p>',unsafe_allow_html=True)
 
 col1_1 , col1_2 , col1_3 = st.columns([2,3,2])
 col2_1 , col2_2 , col2_3 = st.columns([2,3,2])
